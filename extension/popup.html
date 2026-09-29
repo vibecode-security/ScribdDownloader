@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Scribd PDF Downloader</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <div class="popup-header">
+      <div class="logo-area">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="12" y1="18" x2="12" y2="12"></line>
+          <line x1="9" y1="15" x2="12" y2="18"></line>
+          <line x1="15" y1="15" x2="12" y2="18"></line>
+        </svg>
+        <span>Scribd Downloader</span>
+      </div>
+      <span class="badge">v1.0</span>
+    </div>
+
+    <div class="popup-content">
+      <div id="tab-status-card" class="card">
+        <div class="card-label">Trạng thái tab hiện tại:</div>
+        <div id="tab-info" class="card-value">Đang kiểm tra...</div>
+      </div>
+
+      <div class="action-section">
+        <button id="btn-primary-action" class="btn btn-primary" disabled>
+          Kiểm tra tab...
+        </button>
+      </div>
+
+      <div class="divider"><span>HOẶC NHẬP LINK</span></div>
+
+      <div class="input-group">
+        <input 
+          type="text" 
+          id="custom-url" 
+          placeholder="Dán link Scribd (vd: scribd.com/document/351653227/...)"
+        >
+        <button id="btn-custom-download" class="btn btn-secondary">
+          Mở link & Tải
+        </button>
+      </div>
+
+      <div class="instructions">
+        <strong>📌 Hướng dẫn khi hộp thoại In mở ra:</strong>
+        <ol>
+          <li><strong>Máy in:</strong> Chọn <em>"Lưu dưới dạng PDF"</em> (Save as PDF).</li>
+          <li><strong>Tùy chọn:</strong> Bỏ chọn ô <em>"Đầu trang và chân trang"</em>.</li>
+          <li><strong>Đồ họa nền:</strong> Có thể bật/tắt tùy nhu cầu.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
